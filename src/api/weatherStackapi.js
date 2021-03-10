@@ -6,15 +6,16 @@ const base_url = `http://api.weatherstack.com/current`;
 export default {
     async getWeather(cityName){
         try {
+            //get the details for the requested city
             const cityDetails = await axios.get(base_url, {
                 params : {
-                query : cityName,
-                access_key : key,
-                units : 'm'
+                    query : cityName,
+                    access_key : key,
+                    units : 'm'
             }})
-            console.log(cityDetails.data)    
+            return cityDetails.data
         } catch (err) {
-            console.log(err)
+            console.log(err.message)
         }
     }
 }
