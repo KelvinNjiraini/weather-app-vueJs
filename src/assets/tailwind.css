@@ -3,3 +3,16 @@
 @tailwind components;
 
 @tailwind utilities;
+
+
+.day {
+    @apply bg-yellow-50;
+}
+
+.night {
+    @apply bg-indigo-900;
+}
+
+.night h1 {
+    @apply text-gray-100;
+}
